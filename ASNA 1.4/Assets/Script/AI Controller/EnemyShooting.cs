@@ -1,0 +1,107 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.AI;
+
+public class EnemyShooting : MonoBehaviour
+{
+    public float cooldownSpeed;
+    public float fireRate;
+    private float accuracy;
+    public float maxSpreadAngle;
+    public float timeTillMaxSpread;
+    //public float FOV;
+    public float lookRadius;
+
+    public GameObject bullet;
+    public GameObject shootPoint;
+
+    //Transform target;
+    Transform target;
+    Animator anim;
+
+    GameObject closestEnemy;
+    GameObject[] allEnemies;
+    public float cooldown = 0.5f;
+    public float nextShoot = 0;
+
+    NavMeshAgent agent;
+
+    void Start()
+    {
+        //closestEnemy = null;
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        target = GameObject.FindWithTag("Player").transform;
+
+
+        float distance = Vector3.Distance(target.transform.position, transform.position);
+        cooldownSpeed += Time.deltaTime * 60f;
+        if (distance <= lookRadius)
+        {
+
+            accuracy += Time.deltaTime * 1f;
+
+            if (cooldownSpeed >= fireRate)
+            {
+                findClosestEnemy();
+
+                Vector3 dir = closestEnemy.transform.position - transform.position;
+                Quaternion rot = Quaternion.LookRotation(dir);
+                transform.rotation = rot;
+
+                if (nextShoot < Time.time)
+                {
+                    Shoot();
+                    nextShoot = cooldown + Time.time;
+                }
+
+            }
+        }
+        else
+        {
+            //Destroy(bullet.gameObject);
+        }
+    }
+
+    void findClosestEnemy()
+    {
+        float disToClosestEnemy = Mathf.Infinity;
+        closestEnemy = null;
+        allEnemies = GameObject.FindGameObjectsWithTag("Player");
+
+        foreach (GameObject currentEnemy in allEnemies)
+        {
+            float disToEnemy = (currentEnemy.transform.position - this.transform.position).sqrMagnitude;
+
+            if (disToEnemy < disToClosestEnemy)
+            {
+                disToClosestEnemy = disToEnemy;
+                closestEnemy = currentEnemy;
+            }
+        }
+        Debug.DrawLine(this.transform.position, closestEnemy.transform.position);
+    }
+
+
+    void Shoot()
+    {
+        RaycastHit hit;
+        Quaternion fireRotation = Quaternion.LookRotation(transform.forward);
+
+        float currentSpeed = Mathf.Lerp(0.01f, maxSpreadAngle, accuracy / timeTillMaxSpread);
+
+        fireRotation = Quaternion.RotateTowards(fireRotation, Random.rotation, Random.Range(0.0f, currentSpeed));
+
+        if (Physics.Raycast(transform.position, fireRotation * Vector3.forward, out hit, Mathf.Infinity))
+        {
+            GameObject tempBullet = Instantiate(bullet, shootPoint.transform.position, fireRotation);
+            tempBullet.GetComponent<EnemyProjectile>().hitPoint = hit.point;
+        }
+
+    }
+
+}
