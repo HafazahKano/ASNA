@@ -7,16 +7,17 @@ public class PortalTest : Interactable
 {
     public GameObject Altar;
     public GameObject NPC;
-    public ParticleSystem darkParticle;
-    public ParticleSystem activatedParticle;
+    //public ParticleSystem darkParticle;
+    public GameObject AltarActivated;
     public Transform spawn;
 
+    /*
     private void Start()
     {
         darkParticle.Play();
         Instantiate(darkParticle, spawn.position, spawn.rotation);
     }
-
+    */
 
     public override void Interact()
     {
@@ -29,7 +30,7 @@ public class PortalTest : Interactable
     void Particle()
     {
         //Destroy(darkParticle);
-        darkParticle.Stop();
+        //darkParticle.Stop();
         Debug.Log("matiin particle");
     }
 
@@ -37,8 +38,8 @@ public class PortalTest : Interactable
     {
         NPC.SetActive(true);
         Altar.SetActive(true);
-        activatedParticle.Play();
-        Instantiate(activatedParticle, spawn.position, spawn.rotation);
+        Instantiate(AltarActivated, spawn.position, spawn.rotation);
+        Destroy(this.gameObject);
     }
 
 }
