@@ -6,16 +6,20 @@ public class NPCcontroller : MonoBehaviour
 {
     public float moveSpeed = 8f;
     public float rotSpeed = 100f;
+    public Rigidbody rb;
 
     private bool isWandering = false;
     private bool isRotatingLeft = false;
     private bool isRotatingRight = false;
     private bool isWalking = false;
 
+    Animator anim;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        rb = GetComponent<Rigidbody>();
+        anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -24,21 +28,34 @@ public class NPCcontroller : MonoBehaviour
         if (isWandering == false)
         {
             StartCoroutine(Wander());
+            anim.SetBool("isWalking", false);
+            anim.SetBool("isIdle", true);
+            anim.SetBool("isAttack", false);
         }
 
         if (isRotatingRight == true)
         {
             transform.Rotate(transform.up * Time.deltaTime * rotSpeed);
+            anim.SetBool("isWalking", false);
+            anim.SetBool("isIdle", true);
+            anim.SetBool("isAttack", false);
         }
 
         if (isRotatingLeft == true)
         {
             transform.Rotate(transform.up * Time.deltaTime * -rotSpeed);
+            anim.SetBool("isWalking", false);
+            anim.SetBool("isIdle", true);
+            anim.SetBool("isAttack", false);
+
         }
 
         if (isWalking == true)
         {
             transform.position += transform.forward * moveSpeed * Time.deltaTime;
+            anim.SetBool("isWalking", true);
+            anim.SetBool("isIdle", false);
+            anim.SetBool("isAttack", false);
         }
     }
    
