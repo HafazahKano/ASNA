@@ -114,7 +114,7 @@ MonoBehaviour:
   hitPoint: {x: 0, y: 0, z: 0}
   effect: {fileID: 3451182396795263541, guid: e2b4326f93cce894cadd229f6179e29e, type: 3}
   speed: 5000
-  DamageAmount: 20
+  DamageAmount: 10
   chara: {fileID: 0}
 --- !u!65 &8826994340400672159
 BoxCollider:

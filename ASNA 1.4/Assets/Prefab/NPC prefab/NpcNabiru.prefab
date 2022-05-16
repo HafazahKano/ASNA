@@ -1340,6 +1340,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 8
   rotSpeed: 100
+  rb: {fileID: 3756992597229358604}
 --- !u!1 &4589140878649654295
 GameObject:
   m_ObjectHideFlags: 0

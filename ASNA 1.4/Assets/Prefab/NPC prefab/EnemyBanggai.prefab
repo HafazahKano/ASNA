@@ -1430,7 +1430,7 @@ MonoBehaviour:
   lookRadius: 16
   bullet: {fileID: 5480398519039762933, guid: 93b00c1bdef8c0346a2df33c0a07494d, type: 3}
   shootPoint: {fileID: 6033118338596734831}
-  cooldown: 0.2
+  cooldown: 0.8
   nextShoot: 0
 --- !u!1 &6897317683678547695
 GameObject:

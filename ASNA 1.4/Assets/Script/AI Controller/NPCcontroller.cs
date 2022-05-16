@@ -18,7 +18,7 @@ public class NPCcontroller : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        rb = GetComponent<Rigidbody>();
+        //rb = GetComponent<Rigidbody>();
         anim = GetComponent<Animator>();
     }
 
