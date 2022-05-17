@@ -11,7 +11,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ASNA.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/Scenes/Tutorial.unity
+    guid: e925d9b294f819c498f1b831c1f42ba5
+  - enabled: 1
+    path: Assets/Scenes/Portal Apsara.unity
+    guid: ce197b0ab0c12f047a80602733e8aa76
   m_configObjects: {}
