@@ -8,6 +8,7 @@ public class PlayerStats : MonoBehaviour
     public int currentHealth;
 
     public HealthBar healthBar;
+    public GameObject damageText;
 
     private void Start()
     {
@@ -20,6 +21,9 @@ public class PlayerStats : MonoBehaviour
         currentHealth -= damage;
         healthBar.SetHealth(currentHealth);
         Debug.Log(transform.name + "takes" + damage + "damage.");
+
+        DamageIndicator indicator = Instantiate(damageText, transform.position, Quaternion.identity).GetComponent<DamageIndicator>();
+        indicator.SetDamage(damage);
 
         if (currentHealth <= 0)
         {
