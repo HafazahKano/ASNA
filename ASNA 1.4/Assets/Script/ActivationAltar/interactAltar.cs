@@ -14,7 +14,9 @@ public class interactAltar : Interactable
     public int effectSpawn;
 
     public Transform Spawn;
+    public Transform ApsaraRelic;
     public GameObject spawnvfx;
+    public GameObject Apsara;
 
     public GameObject colCutscene;
 
@@ -41,10 +43,9 @@ public class interactAltar : Interactable
                     Inventory.instance.Remove(item);
                 }
             }
-            Instantiate(Prefab, spawnPoint.position, spawnPoint.rotation);
-            collectParticle.Play();
-            colCutscene.SetActive(true);
-            Instantiate(spawnvfx, Spawn.position, Spawn.rotation);
+
+            Instan();
+            
 
             Debug.Log("go");
         }
@@ -53,5 +54,14 @@ public class interactAltar : Interactable
             collectParticle.Stop();
             Debug.Log("nah");
         }
+    }
+
+    public void Instan()
+    {
+        Instantiate(Prefab, spawnPoint.position, spawnPoint.rotation);
+        collectParticle.Play();
+        colCutscene.SetActive(true);
+        Instantiate(spawnvfx, Spawn.position, Spawn.rotation);
+        Instantiate(Apsara, ApsaraRelic.position, ApsaraRelic.rotation);
     }
 }
