@@ -567,6 +567,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7674380660433514281}
   - component: {fileID: 3290872303518750265}
+  - component: {fileID: 3754981446535346408}
   m_Layer: 0
   m_Name: Cube
   m_TagString: NPC
@@ -660,6 +661,20 @@ SkinnedMeshRenderer:
     m_Center: {x: 0.00002842443, y: 0.002475877, z: 0.00038745184}
     m_Extent: {x: 0.010380998, y: 0.0061770817, z: 0.004185742}
   m_DirtyAABB: 0
+--- !u!64 &3754981446535346408
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5978419583428993475}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 0}
 --- !u!1 &6049659918526336393
 GameObject:
   m_ObjectHideFlags: 0
@@ -778,7 +793,7 @@ Rigidbody:
   m_Mass: 10
   m_Drag: 0
   m_AngularDrag: 10
-  m_UseGravity: 0
+  m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0

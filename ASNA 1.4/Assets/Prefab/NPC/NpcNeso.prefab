@@ -1270,9 +1270,9 @@ GameObject:
   m_Component:
   - component: {fileID: 9161355067568561198}
   - component: {fileID: 8694501001288973263}
-  - component: {fileID: 8694501001288973262}
   - component: {fileID: 8694501001288973257}
   - component: {fileID: 8694501001288973256}
+  - component: {fileID: 71115177332384955}
   m_Layer: 0
   m_Name: NpcNeso
   m_TagString: Untagged
@@ -1306,28 +1306,14 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8388089861673207444}
   serializedVersion: 2
-  m_Mass: 100
+  m_Mass: 10
   m_Drag: 0
-  m_AngularDrag: 100
+  m_AngularDrag: 10
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 0
---- !u!136 &8694501001288973262
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8388089861673207444}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.6585083
-  m_Height: 1.9229126
-  m_Direction: 1
-  m_Center: {x: 0, y: 0.9189453, z: 0.1585083}
 --- !u!95 &8694501001288973257
 Animator:
   serializedVersion: 3
@@ -1361,6 +1347,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 8
   rotSpeed: 100
+--- !u!65 &71115177332384955
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8388089861673207444}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1.6485596, z: 1.2617188}
+  m_Center: {x: 0, y: 0.8249512, z: 0.13085938}
 --- !u!1 &8688774460492759459
 GameObject:
   m_ObjectHideFlags: 0
