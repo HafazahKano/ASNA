@@ -910,7 +910,7 @@ Rigidbody:
   m_GameObject: {fileID: 7526978809300699917}
   serializedVersion: 2
   m_Mass: 100
-  m_Drag: 100
+  m_Drag: 0
   m_AngularDrag: 100
   m_UseGravity: 1
   m_IsKinematic: 0
@@ -976,7 +976,7 @@ GameObject:
   - component: {fileID: 1181107511644910530}
   m_Layer: 0
   m_Name: Cube
-  m_TagString: NPC
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

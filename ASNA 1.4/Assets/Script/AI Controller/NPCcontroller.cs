@@ -6,7 +6,6 @@ public class NPCcontroller : MonoBehaviour
 {
     public float moveSpeed = 8f;
     public float rotSpeed = 100f;
-    public Rigidbody rb;
 
     private bool isWandering = false;
     private bool isRotatingLeft = false;
@@ -18,13 +17,17 @@ public class NPCcontroller : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //rb = GetComponent<Rigidbody>();
         anim = GetComponent<Animator>();
+        
+        
     }
 
     // Update is called once per frame
     public void Update()
     {
+        Rigidbody rb= gameObject.AddComponent<Rigidbody>();
+        
+
         if (isWandering == false)
         {
             StartCoroutine(Wander());

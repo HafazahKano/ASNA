@@ -38,10 +38,10 @@ public class Enemy : MonoBehaviour
         Debug.Log(transform.name + "takes" + damage + "damage.");
 
         if (currentHealth <= 0)
-        {
-            Die();
-            Destroy(gameObject);
+        { 
             Instantiate(prefab, transform.position, transform.rotation);
+            Destroy(gameObject);
+            Die();
         }
     }
 
