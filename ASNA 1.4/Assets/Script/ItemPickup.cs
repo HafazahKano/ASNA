@@ -5,7 +5,7 @@ using UnityEngine;
 public class ItemPickup : Interactable
 {
     public Item item;
-    public ParticleSystem efek;
+    //public ParticleSystem efek;
 
     public override void Interact()
     {
@@ -32,6 +32,6 @@ public class ItemPickup : Interactable
 
     public void Smoke()
     {
-        efek.Play();
+        //efek.Play();
     }
 }

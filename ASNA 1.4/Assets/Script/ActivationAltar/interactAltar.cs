@@ -18,7 +18,7 @@ public class interactAltar : Interactable
     public GameObject spawnvfx;
     public GameObject Apsara;
 
-    public GameObject colCutscene;
+    //public GameObject colCutscene;
 
 
     public override void Interact()
@@ -60,7 +60,7 @@ public class interactAltar : Interactable
     {
         Instantiate(Prefab, spawnPoint.position, spawnPoint.rotation);
         collectParticle.Play();
-        colCutscene.SetActive(true);
+        //colCutscene.SetActive(true);
         Instantiate(spawnvfx, Spawn.position, Spawn.rotation);
         Instantiate(Apsara, ApsaraRelic.position, ApsaraRelic.rotation);
     }
