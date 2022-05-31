@@ -1,13 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.AI;
 
 public class ThirdPersonController : MonoBehaviour
 {
     public CharacterController controller;
     public Transform cam;
 
+    //movement
     public float speed = 6f;
     public float gravity = -20f;
     public float jumpHeight = -2f;
@@ -22,13 +22,9 @@ public class ThirdPersonController : MonoBehaviour
     public float turnSmoothTime = 0.1f;
     public float turnSmoothVelocity;
 
-    AIMotor motor;
-    public NavMeshAgent agent;
     public float rotateVelocity = 20;
 
-    public enum attackType { Ranged, Meelee };
-    public attackType AttackType;
-
+    //targeting enemy
     public GameObject targetEnemy;
     public float attackRange = 50f;
     public float rotateSpeedForAttack;
@@ -39,6 +35,7 @@ public class ThirdPersonController : MonoBehaviour
     private Animator anim;
     public float lookRadius = 50f;
 
+
     Enemy enemy;
     CharacterStat stat;
 
@@ -47,9 +44,6 @@ public class ThirdPersonController : MonoBehaviour
     {
         target = GameObject.FindWithTag("NPC").transform;
         anim = GetComponentInChildren<Animator>();
-        motor = GetComponent<AIMotor>();
-        //enemy = GetComponent<Enemy>();
-       // stat = GetComponent<CharacterStat>();
     }
 
     // Update is called once per frame
@@ -82,12 +76,6 @@ public class ThirdPersonController : MonoBehaviour
             anim.SetFloat("Speed", 1f, 0.1f, Time.deltaTime);
         }
 
-        //lari
-        if (Input.GetKey(KeyCode.LeftShift))
-        {
-            transform.position = Vector3.forward * speed * 2f * Time.deltaTime;
-        }
-
         if (Input.GetKeyDown(KeyCode.F))
         {
             anim.SetBool("Summon", true);
@@ -112,11 +100,8 @@ public class ThirdPersonController : MonoBehaviour
 
         controller.Move(velocity * Time.deltaTime);
 
-        
 
-        
     }
-   
-    
+
 
 }
