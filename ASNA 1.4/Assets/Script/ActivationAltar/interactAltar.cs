@@ -19,9 +19,14 @@ public class interactAltar : Interactable
     public GameObject Apsara;
 
     public GameObject LvManager;
-
+    //public Animator anim;
     //public GameObject colCutscene;
 
+    private void Start()
+    {
+        //anim = GetComponent<Animator>();
+        //anim.SetBool("OpenBedawang", false);
+    }
 
     public override void Interact()
     {
@@ -47,7 +52,7 @@ public class interactAltar : Interactable
             }
 
             Instan();
-
+            //anim.SetBool("OpenBedawang", true);
             LvManager.SetActive(true);
 
             Debug.Log("go");

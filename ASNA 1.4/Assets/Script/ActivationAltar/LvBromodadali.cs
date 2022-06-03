@@ -6,18 +6,19 @@ public class LvBromodadali : MonoBehaviour
 {
     public GameObject Item;
 
-
-    private Animator anim;
-    // Start is called before the first frame update
+    public Animator anim;
+     //Start is called before the first frame update
     void Start()
     {
+        Item.SetActive(false);
         anim = GetComponent<Animator>();
+        anim.SetBool("OpenBedawang", true);
     }
 
     // Update is called once per frame
     void Update()
-    {
-        anim.SetBool("OpenBedawang", true);
+    { 
         Item.SetActive(true);
+        
     }
 }
