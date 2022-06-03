@@ -18,6 +18,8 @@ public class interactAltar : Interactable
     public GameObject spawnvfx;
     public GameObject Apsara;
 
+    public GameObject LvManager;
+
     //public GameObject colCutscene;
 
 
@@ -45,7 +47,8 @@ public class interactAltar : Interactable
             }
 
             Instan();
-            
+
+            LvManager.SetActive(true);
 
             Debug.Log("go");
         }
