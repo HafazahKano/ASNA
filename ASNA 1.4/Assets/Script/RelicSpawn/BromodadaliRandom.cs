@@ -17,8 +17,8 @@ public class BromodadaliRandom : MonoBehaviour
     {
         while (relicCount < 5)
         {
-            xPos = Random.Range(-320, 161);
-            zPos = Random.Range(1028, 878);
+            xPos = Random.Range(163, -159);
+            zPos = Random.Range(1016, 847);
 
             Instantiate(Relic, new Vector3(xPos, -401, zPos), Quaternion.identity);
             yield return new WaitForSeconds(0.1f);
