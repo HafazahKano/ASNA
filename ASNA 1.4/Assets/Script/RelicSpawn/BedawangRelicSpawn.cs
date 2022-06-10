@@ -17,10 +17,10 @@ public class BedawangRelicSpawn : MonoBehaviour
     {
         while (relicCount < 6)
         {
-            xPos = Random.Range(107, -208);
-            zPos = Random.Range(506, 136);
+            xPos = Random.Range(-171, 152);
+            zPos = Random.Range(482, 90);
 
-            Instantiate(Relic, new Vector3(xPos, -405, zPos), Quaternion.identity);
+            Instantiate(Relic, new Vector3(xPos, -390, zPos), Quaternion.identity);
             yield return new WaitForSeconds(0.1f);
 
             relicCount += 1;

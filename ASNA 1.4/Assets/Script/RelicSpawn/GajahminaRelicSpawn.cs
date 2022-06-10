@@ -17,10 +17,10 @@ public class GajahminaRelicSpawn : MonoBehaviour
     {
         while(relicCount < 5)
         {
-            xPos = Random.Range(-719, -486);
-            zPos = Random.Range(413, 746);
+            xPos = Random.Range(-874, -535);
+            zPos = Random.Range(183, 630);
 
-            Instantiate(Relic, new Vector3(xPos, -400, zPos), Quaternion.identity);
+            Instantiate(Relic, new Vector3(xPos, -390, zPos), Quaternion.identity);
             yield return new WaitForSeconds(0.1f);
 
             relicCount += 1;

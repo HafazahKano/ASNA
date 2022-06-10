@@ -17,10 +17,10 @@ public class PesutRelicSpawn : MonoBehaviour
     {
         while (relicCount < 4)
         {
-            xPos = Random.Range(582, 1028);
-            zPos = Random.Range(-459, -79);
+            xPos = Random.Range(483, 1000);
+            zPos = Random.Range(-507, -145);
 
-            Instantiate(Relic, new Vector3(xPos, -382, zPos), Quaternion.identity);
+            Instantiate(Relic, new Vector3(xPos, -360, zPos), Quaternion.identity);
             yield return new WaitForSeconds(0.1f);
 
             relicCount += 1;
