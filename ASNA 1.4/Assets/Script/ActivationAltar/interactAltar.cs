@@ -8,9 +8,9 @@ public class interactAltar : Interactable
     public int neededAmount;
 
     public Transform spawnPoint;
-    public GameObject Prefab;
+    //public GameObject Prefab;
 
-    public ParticleSystem collectParticle;
+    //public ParticleSystem collectParticle;
     public int effectSpawn;
 
     public Transform Spawn;
@@ -59,15 +59,15 @@ public class interactAltar : Interactable
         }
         else
         {
-            collectParticle.Stop();
+            //collectParticle.Stop();
             Debug.Log("nah");
         }
     }
 
     public void Instan()
     {
-        Instantiate(Prefab, spawnPoint.position, spawnPoint.rotation);
-        collectParticle.Play();
+        //Instantiate(Prefab, spawnPoint.position, spawnPoint.rotation);
+        //collectParticle.Play();
         colCutscene.SetActive(true);
         Instantiate(spawnvfx, Spawn.position, Spawn.rotation);
         Instantiate(Apsara, ApsaraRelic.position, ApsaraRelic.rotation);
