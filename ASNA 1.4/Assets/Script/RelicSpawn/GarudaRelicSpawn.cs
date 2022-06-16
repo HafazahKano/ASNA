@@ -15,7 +15,7 @@ public class GarudaRelicSpawn : MonoBehaviour
 
     IEnumerator RelicDrop()
     {
-        while (relicCount < 4)
+        while (relicCount < 5)
         {
             xPos = Random.Range(830, 686);
             zPos = Random.Range(740, 245);

@@ -15,7 +15,7 @@ public class BedawangRelicSpawn : MonoBehaviour
 
     IEnumerator RelicDrop()
     {
-        while (relicCount < 6)
+        while (relicCount < 5)
         {
             xPos = Random.Range(-171, 152);
             zPos = Random.Range(482, 90);

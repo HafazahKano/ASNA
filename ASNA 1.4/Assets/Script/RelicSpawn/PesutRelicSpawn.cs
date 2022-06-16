@@ -15,7 +15,7 @@ public class PesutRelicSpawn : MonoBehaviour
 
     IEnumerator RelicDrop()
     {
-        while (relicCount < 4)
+        while (relicCount < 5)
         {
             xPos = Random.Range(483, 1000);
             zPos = Random.Range(-507, -145);

@@ -864,7 +864,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0275bd9dd555a1542832e6cd499d616b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lookRadius: 70
+  lookRadius: 45
   DamageAmount: 50
   cooldown: 1
   nextShoot: 0

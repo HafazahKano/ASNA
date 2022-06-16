@@ -828,7 +828,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac8b384ac96ab0b4cbc8580cfc21e1f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxHealth: 200
+  MaxHealth: 150
   currentHealth: 0
   PlayerHeal: 100
   prefab: {fileID: 56472132475585318, guid: 2bff99f9f34a8804aa41470d296cc790, type: 3}

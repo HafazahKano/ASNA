@@ -811,7 +811,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0275bd9dd555a1542832e6cd499d616b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lookRadius: 60
+  lookRadius: 50
   DamageAmount: 10
   cooldown: 0.5
   nextShoot: 0
@@ -827,7 +827,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac8b384ac96ab0b4cbc8580cfc21e1f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxHealth: 700
+  MaxHealth: 250
   currentHealth: 0
   PlayerHeal: 100
   prefab: {fileID: 7526978809300699917, guid: f9e6758a4e32a314fb38e3b175edc6dc, type: 3}
