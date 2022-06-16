@@ -17,8 +17,8 @@ public class SpawnRandomAul : MonoBehaviour
     {
         while (relicCount < 50)
         {
-            xPos = Random.Range(190, -347);
-            zPos = Random.Range(633, 416);
+            xPos = Random.Range(-234, 160);
+            zPos = Random.Range(475, 64);
 
             Instantiate(Relic, new Vector3(xPos, -411, zPos), Quaternion.identity);
             yield return new WaitForSeconds(0.01f);

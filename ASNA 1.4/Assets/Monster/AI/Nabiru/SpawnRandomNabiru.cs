@@ -17,8 +17,8 @@ public class SpawnRandomNabiru : MonoBehaviour
     {
         while (relicCount < 10)
         {
-            xPos = Random.Range(1187, 298);
-            zPos = Random.Range(-334, -290);
+            xPos = Random.Range(507, 1054);
+            zPos = Random.Range(-519, -110);
 
             Instantiate(Relic, new Vector3(xPos, -383, zPos), Quaternion.identity);
             yield return new WaitForSeconds(0.01f);

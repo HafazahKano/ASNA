@@ -17,8 +17,8 @@ public class SpawnRandomAhool : MonoBehaviour
     {
         while (relicCount < 50)
         {
-            xPos = Random.Range(54, -316);
-            zPos = Random.Range(-209, -399);
+            xPos = Random.Range(-390, 50);
+            zPos = Random.Range(26, -285);
 
             Instantiate(Relic, new Vector3(xPos, -411, zPos), Quaternion.identity);
             yield return new WaitForSeconds(0.01f);

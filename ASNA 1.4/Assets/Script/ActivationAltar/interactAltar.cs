@@ -8,19 +8,21 @@ public class interactAltar : Interactable
     public int neededAmount;
 
     public Transform spawnPoint;
-    //public GameObject Prefab;
+    public GameObject Prefab;
 
     //public ParticleSystem collectParticle;
-    public int effectSpawn;
+    //public int effectSpawn;
 
     public Transform Spawn;
     public Transform ApsaraRelic;
-    public GameObject spawnvfx;
+    //public GameObject spawnvfx;
     public GameObject Apsara;
 
     public GameObject LvManager;
     //public Animator anim;
     public GameObject colCutscene;
+    public int TimeToStop=4;
+    public GameObject UI;
 
     private void Start()
     {
@@ -50,11 +52,10 @@ public class interactAltar : Interactable
                     Inventory.instance.Remove(item);
                 }
             }
-
+            StartCoroutine(UIactivation());
             Instan();
             //anim.SetBool("OpenBedawang", true);
-            LvManager.SetActive(true);
-
+            
             Debug.Log("go");
         }
         else
@@ -66,10 +67,26 @@ public class interactAltar : Interactable
 
     public void Instan()
     {
-        //Instantiate(Prefab, spawnPoint.position, spawnPoint.rotation);
+        LvManager.SetActive(false);
+        Instantiate(Apsara, ApsaraRelic.position, ApsaraRelic.rotation);
+        Instantiate(Prefab, spawnPoint.position, spawnPoint.rotation);
         //collectParticle.Play();
         colCutscene.SetActive(true);
-        Instantiate(spawnvfx, Spawn.position, Spawn.rotation);
-        Instantiate(Apsara, ApsaraRelic.position, ApsaraRelic.rotation);
+        Destroy(colCutscene, TimeToStop);
+
+        
+
+        //Instantiate(spawnvfx, Spawn.position, Spawn.rotation);
+    }
+
+    IEnumerator UIactivation()
+    {
+        yield return new WaitForSeconds(0);
+
+        UI.SetActive(false);
+
+        yield return new WaitForSeconds(14);
+
+        UI.SetActive(true);
     }
 }

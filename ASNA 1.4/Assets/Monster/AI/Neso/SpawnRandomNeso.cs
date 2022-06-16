@@ -17,8 +17,8 @@ public class SpawnRandomNeso : MonoBehaviour
     {
         while (relicCount < 5)
         {
-            xPos = Random.Range(166, 846);
-            zPos = Random.Range(-253, 975);
+            xPos = Random.Range(-41, 477);
+            zPos = Random.Range(73, 289);
 
             Instantiate(Relic, new Vector3(xPos, -411, zPos), Quaternion.identity);
             yield return new WaitForSeconds(0.01f);

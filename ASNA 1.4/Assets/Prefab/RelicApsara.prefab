@@ -14395,9 +14395,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5db3c63f3fddf2d4db96ad64f4cc25ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 3
+  radius: 10
   item: {fileID: 11400000, guid: cb114b739a7661d48a72844623968711, type: 2}
-  efek: {fileID: 0}
 --- !u!1001 &7358304801784625956
 PrefabInstance:
   m_ObjectHideFlags: 0

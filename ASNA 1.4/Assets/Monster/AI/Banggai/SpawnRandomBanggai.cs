@@ -17,8 +17,8 @@ public class SpawnRandomBanggai : MonoBehaviour
     {
         while (relicCount < 10)
         {
-            xPos = Random.Range(774, 559);
-            zPos = Random.Range(784, 653);
+            xPos = Random.Range(818, 519);
+            zPos = Random.Range(792, 611);
 
             Instantiate(Relic, new Vector3(xPos, -411, zPos), Quaternion.identity);
             yield return new WaitForSeconds(0.01f);
